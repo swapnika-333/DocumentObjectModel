@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const myPromies=new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve('Promise fulfilled after 2 seconds');
+            },2000);
+        });
+        myPromies
+            .then((value)=>{
+                console.log(value+" Lilly");
+            })
+            .catch((error)=>{
+                console.log(error+" Error");
+            });
+    </script>
+    <script>
+        const myPromies1=new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                reject('Promise rejected after 2 seconds');
+            },2000);
+        });
+        myPromies1
+            .then((value)=>{
+                console.log(value+" Lilly");
+            })
+            .catch((error)=>{
+                console.log(error+" Error");
+            });
+    </script>
+
+</head>
+<body>
+    <h1>Promises in JavaScript</h1>
+</body>
+</html>

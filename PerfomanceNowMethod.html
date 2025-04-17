@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Sum(){
+            let sum=0;
+            for(let i=0;i<1000000000;i++){
+                sum+=i
+            }
+            return sum;        
+        }
+       
+
+        const start=performance.now();
+        let s=Sum();
+        const end=performance.now();
+        console.log(end-start);
+
+        var string = '123abcABC-_*(!@#$%^&*()_-={}[]:\"<>,.?/~`';
+        var stripped = string.replace(/[^A-Za-z0-9]/g, '');
+        console.log(stripped);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
